@@ -36,12 +36,14 @@ header {
   padding: 0 1em;
   z-index: 10000;
   transition: all 0.4s linear;
-  h1 {
-    cursor: pointer;
-    color: #fff;
-    font-family: "Abril Fatface", sans-serif;
-    font-weight: lighter;
-    font-size: 2em;
+  .logo-container {
+    h1 {
+      cursor: pointer;
+      color: #fff;
+      font-family: "Abril Fatface", sans-serif;
+      font-weight: lighter;
+      font-size: 2em;
+    }
   }
   nav {
     display: none;
@@ -353,11 +355,16 @@ header {
   opacity: 0;
   transform: translateX(-100%);
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   header {
-    h1 {
+    .logo-container {
       width: 100%;
-      font-size: 3em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      h1 {
+        font-size: 3em;
+      }
     }
     nav {
       width: 100%;
