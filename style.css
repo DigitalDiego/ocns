@@ -1,0 +1,691 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  border: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #112233;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  z-index: 10000;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "Abril Fatface", sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+header nav {
+  display: none;
+}
+
+header .nav-btn {
+  display: none;
+}
+
+header .nav-btn:hover {
+  font-weight: bold;
+}
+
+header .side-menu-btn {
+  width: 1.2em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+header .side-menu-btn .bar-one {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header .side-menu-btn .bar-two {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.active-nav {
+  background: #112233;
+}
+
+.active-side-menu-btn .bar-one {
+  -webkit-transform: rotate(45deg) translateY(8px);
+          transform: rotate(45deg) translateY(8px);
+}
+
+.active-side-menu-btn .bar-two {
+  -webkit-transform: rotate(-45deg) translateY(-8px);
+          transform: rotate(-45deg) translateY(-8px);
+}
+
+.side-menu {
+  position: fixed;
+  top: 0vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #112233;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  z-index: 1000;
+}
+
+.side-menu a {
+  padding-left: 1em;
+  font-size: 1.2em;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side-menu a:hover {
+  background: #fff;
+  color: #112233;
+  font-weight: bold;
+}
+
+.active-side-menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.hero-section h1 {
+  color: #fff;
+  z-index: 900;
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
+
+.about-section {
+  padding: 1em;
+}
+
+.about-section .top-row {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.about-section p {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.client-section {
+  padding: 1em;
+}
+
+.client-section .top-row {
+  margin-bottom: 1em;
+}
+
+.client-section .container .quotes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.client-section .container .quotes div blockquote {
+  margin-bottom: 1em;
+}
+
+.client-section .container .quotes div cite {
+  text-align: right;
+}
+
+.client-section .images {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.client-section .images div {
+  width: 45%;
+  height: 100%;
+  border: 2px solid #112233;
+}
+
+.client-section .images div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blocks {
+  padding: 1em 1em 0 1em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blocks .top-row {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.blocks .top-row h1 {
+  text-align: left;
+}
+
+.blocks .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blocks .container .block {
+  width: 80%;
+  height: 400px;
+  margin-bottom: 1em;
+  position: relative;
+  border: 2px solid #112233;
+}
+
+.blocks .container .block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.blocks .container .block .desc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 200;
+  width: 100%;
+  background: rgba(17, 34, 51, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blocks .container .block .desc p {
+  margin: 1em 0;
+  text-align: center;
+  color: #fff;
+}
+
+.blocks .container .block .desc button {
+  padding: 0.2em 1em;
+  margin: 0 auto 1em auto;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.blocks .container .block .desc button:hover {
+  background: #fff;
+  color: #112233;
+  font-weight: bold;
+}
+
+.links {
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.links div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links div .top-row {
+  margin-bottom: 0.5em;
+}
+
+.links div .top-row h2 {
+  text-align: center;
+}
+
+.links div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links div div a {
+  margin: 0.1em 0;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.links div div a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  padding: 0 1em;
+  width: 100%;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #112233;
+}
+
+.copyright h1 {
+  font-family: "Abril Fatface", sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+[data-scroll] {
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.about-section[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about-section[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.client-section[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.client-section[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.blocks[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.blocks[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.links[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.links[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media only screen and (min-width: 700px) {
+  header h1 {
+    width: 100%;
+    font-size: 3em;
+  }
+  header nav {
+    width: 100%;
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav a {
+    color: #fff;
+    letter-spacing: 0.1em;
+  }
+  header .nav-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .nav-btn button {
+    padding: 0.5em 2em;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  header .nav-btn button:hover {
+    background: #fff;
+    color: #112233;
+    font-weight: bold;
+  }
+  header .side-menu-btn {
+    display: none;
+  }
+  .hero-section h1 {
+    font-size: 3em;
+  }
+  .about-section,
+  .client-section,
+  .links {
+    padding: 2em 1em;
+  }
+  .blocks {
+    padding: 2em 1em 0 1em;
+  }
+  .about-section .top-row h1 {
+    font-size: 2.2em;
+  }
+  .client-section .top-row h1 {
+    font-size: 2.2em;
+  }
+  .client-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .client-section .container .quotes,
+  .client-section .container .images {
+    width: 50%;
+    padding: 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .client-section .container .quotes {
+    padding-right: 1em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .client-section .container .images {
+    padding-left: 1em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .client-section .container .images div {
+    width: 45%;
+    height: 500px;
+  }
+  .blocks .top-row h1 {
+    font-size: 2.2em;
+  }
+  .blocks .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .blocks .container .block {
+    width: 30%;
+  }
+  .links div div a {
+    margin: 0.1em 0;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  header {
+    padding: 0 2em;
+  }
+  header h1 {
+    font-size: 5em;
+  }
+  .hero-section h1 {
+    font-size: 5em;
+  }
+  .about-section,
+  .client-section,
+  .blocks,
+  .links {
+    padding: 2em;
+  }
+  .client-section .container .quotes div {
+    width: 50%;
+  }
+  .client-section .container .images div {
+    width: 30%;
+  }
+  .blocks .container {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .blocks .container .block {
+    width: 20%;
+  }
+  .blocks .container .block .desc button {
+    padding: 0.25em 2em;
+  }
+  .copyright {
+    padding: 0 2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
