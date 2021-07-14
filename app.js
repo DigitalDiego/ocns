@@ -1,9 +1,13 @@
 const sideMenuBtn = document.getElementById('side-menu-btn');
     sideMenu = document.getElementById('side-menu');
+    scrollUp = docuemnt.get('scrollUp')
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('nav');
     nav.classList.toggle('active-nav', window.scrollY > 0)
 })
+scrollUp.addEventListener('click', () => {
+    window.scrol;To(0, 0);
+});
 sideMenuBtn.addEventListener('click', () => {
     sideMenuBtn.classList.toggle('active-side-menu-btn');
     sideMenu.classList.toggle('active-side-menu');
