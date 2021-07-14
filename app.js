@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
     nav.classList.toggle('active-nav', window.scrollY > 0)
 })
 scrollUp.addEventListener('click', () => {
-    window.scrol;To(0, 0);
+    window.scrollTo(0, 0);
 });
 sideMenuBtn.addEventListener('click', () => {
     sideMenuBtn.classList.toggle('active-side-menu-btn');
