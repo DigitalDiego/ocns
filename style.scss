@@ -275,7 +275,7 @@ header {
 .links {
   width: 100%;
   padding: 1em;
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
   div {
@@ -468,6 +468,7 @@ header {
     }
   }
   .links {
+    display:flex;
     div {
       div {
         a {
@@ -521,6 +522,9 @@ header {
         }
       }
     }
+  }
+  .link{
+    display:flex;
   }
   .copyright {
     padding: 0 2em;

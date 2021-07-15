@@ -396,9 +396,7 @@ header .side-menu-btn .bar-two {
 .links {
   width: 100%;
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -662,6 +660,11 @@ header .side-menu-btn .bar-two {
   .blocks .container .block {
     width: 30%;
   }
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .links div div a {
     margin: 0.1em 0;
   }
@@ -699,6 +702,11 @@ header .side-menu-btn .bar-two {
   }
   .blocks .container .block .desc button {
     padding: 0.25em 2em;
+  }
+  .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .copyright {
     padding: 0 2em;
