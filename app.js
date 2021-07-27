@@ -27,5 +27,9 @@ ScrollOut({
 });
 ScrollOut({
     once:true,
+    targets:'.email'
+});
+ScrollOut({
+    once:true,
     targets:'.links'
 });

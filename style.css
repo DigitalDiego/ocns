@@ -392,6 +392,77 @@ header .side-menu-btn .bar-two {
   font-weight: bold;
 }
 
+.email {
+  padding: 1em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.email * {
+  font-family: "Montserrat", sans-serif;
+}
+
+.email .top-row {
+  margin-bottom: 1em;
+}
+
+.email .top-row h1 {
+  color: #112233;
+}
+
+.email .bottom-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.email .bottom-row input {
+  width: 100%;
+  margin-bottom: 1em;
+  border: 2px solid #112233;
+  outline: none;
+  padding: 0.2em;
+}
+
+.email .bottom-row button {
+  width: 50%;
+  border: 2px solid #112233;
+  outline: none;
+  padding: 0.2em;
+  color: #112233;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.email .bottom-row button:hover {
+  background: #112233;
+  color: #fff;
+}
+
 .links {
   width: 100%;
   padding: 1em;
@@ -513,6 +584,18 @@ header .side-menu-btn .bar-two {
           transform: translateX(100%);
 }
 
+.email[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.email[data-scroll="out"] {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
 .links[data-scroll="in"] {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -521,8 +604,8 @@ header .side-menu-btn .bar-two {
 
 .links[data-scroll="out"] {
   opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 @media only screen and (min-width: 800px) {
@@ -604,6 +687,7 @@ header .side-menu-btn .bar-two {
   }
   .about-section,
   .client-section,
+  .email,
   .links {
     padding: 2em 1em;
   }
@@ -670,6 +754,31 @@ header .side-menu-btn .bar-two {
   .blocks .container .block {
     width: 30%;
   }
+  .email .top-row h1 {
+    font-size: 2.2em;
+  }
+  .email .bottom-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .email .bottom-row input {
+    padding: 0.5em 0.2em;
+    width: 50%;
+    margin: 0 1em 0 0;
+  }
+  .email .bottom-row button {
+    padding: 0.5em 0.2em;
+    width: 10%;
+  }
   .links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -693,6 +802,7 @@ header .side-menu-btn .bar-two {
   .about-section,
   .client-section,
   .blocks,
+  .email,
   .links {
     padding: 2em;
   }
@@ -712,6 +822,10 @@ header .side-menu-btn .bar-two {
   }
   .blocks .container .block .desc button {
     padding: 0.25em 2em;
+  }
+  .email .bottom-row input,
+  .email .bottom-row button {
+    font-size: 1em;
   }
   .link {
     display: -webkit-box;
