@@ -293,7 +293,7 @@ header {
     flex-direction: column;
     .input {
       width: 100%;
-      height: 50px;
+      height: 80px;
       border: 1px solid #112233;
       input {
         background: transparent;
@@ -302,6 +302,7 @@ header {
         border: none;
         outline: none;
         padding-left: 0.5em;
+        font-size: 1em;
       }
       input[type="text"] {
         border-bottom: 1px solid #112233;
@@ -319,6 +320,7 @@ header {
         border: 1px solid #112233;
         background: transparent;
         cursor: pointer;
+        font-size: 1em;
         &:hover {
           background: #112233;
           color: #fff;
